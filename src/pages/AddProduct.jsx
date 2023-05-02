@@ -248,7 +248,7 @@ const AddProduct = () => {
                   <label htmlFor={attribute.id}>{attribute.description}({attribute.measurement_unit}) *</label>
                   <input
                     type="text"
-                    id={attribute.description}
+                    id={attribute.description.toLowerCase()}
                     value={attribute.id.value}
                     name={'attribute'+attribute.id}
                     onChange={(event) => {
