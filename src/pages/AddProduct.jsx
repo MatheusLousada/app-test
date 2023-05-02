@@ -234,7 +234,7 @@ const AddProduct = () => {
               value={values.types}
             >
               {options.map((option) => (
-                <option key={option.id} value={option.id}>
+                <option key={option.id} value={option.description}>
                   {option.description}
                 </option>
               ))}
