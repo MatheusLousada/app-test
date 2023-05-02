@@ -29,7 +29,7 @@ export async function login() {
 
 export const addProduct = async (product) => {
   const url = `${BASE_URL}/products`;
-  const token = localStorage.getItem("token") ?? BASE_TOKEN;
+  const token = BASE_TOKEN;
   const headers = {
     "Content-Type": "application/json",
     "Authorization": `Bearer ${token}`,
