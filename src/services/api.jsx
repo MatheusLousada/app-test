@@ -1,4 +1,5 @@
 const BASE_URL = "https://test-junior-matheus-lousada.up.railway.app";
+const BASE_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InRlc3RTY2FuZGl3ZWJAdGVzdGUuY29tIiwicGFzc3dvcmQiOiI4U1J7RjlGUWhBVHUifQ.wdevm5SBRC9hUXez6tBhAatIjqGXxcNCCLUBPzIBA18";
 
 export async function login() {
   const url = `${BASE_URL}/login`;
@@ -28,7 +29,7 @@ export async function login() {
 
 export const addProduct = async (product) => {
   const url = `${BASE_URL}/products`;
-  const token = localStorage.getItem("token") ?? '' ;
+  const token = localStorage.getItem("token") ?? BASE_TOKEN;
   const headers = {
     "Content-Type": "application/json",
     "Authorization": `Bearer ${token}`,
