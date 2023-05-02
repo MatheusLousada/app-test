@@ -25,6 +25,7 @@ function App() {
     }}>
       <BackgroundImages />
       <BrowserRouter>
+      <body>
         <header>
           <Navbar />
         </header>
@@ -37,6 +38,7 @@ function App() {
         <footer>
           <Footer />
         </footer>
+      </body>
       </BrowserRouter>
     </ProductContext.Provider>
   );
