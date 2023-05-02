@@ -19,9 +19,12 @@ export async function login() {
     headers: headers,
     body: JSON.stringify(body)
   };
-
+  console.log('aqui');
+  console.log('----------');
   await fetch(url, requestOptions)
-  .then(response => response.json())
+  .then(response => {
+    console.log(response)
+    response.json()})
   .then(data => {
     console.log(data.token)
     localStorage.setItem('token', data.token)
