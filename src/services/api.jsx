@@ -29,7 +29,7 @@ export async function login() {
 
 export const addProduct = async (product) => {
   const url = `${BASE_URL}/products`;
-  const token = BASE_TOKEN;
+  const token = localStorage.getItem("token") ?? BASE_TOKEN;
   const headers = {
     "Content-Type": "application/json",
     "Authorization": `Bearer ${token}`,
@@ -49,7 +49,7 @@ export const addProduct = async (product) => {
 
 export const getProducts = async () => {
   const url = `${BASE_URL}/products`;
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token") ?? BASE_TOKEN;
   const response = await fetch(url, {
     method: "GET",
     headers: {
@@ -67,7 +67,7 @@ export const getProducts = async () => {
 
 export const deleteProducts = async (skusToDelete) => {
   const url = `${BASE_URL}/products`;
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token") ?? BASE_TOKEN;
   const headers = {
     "Content-Type": "application/json",
     Authorization: `Bearer ${token}`,
@@ -85,7 +85,7 @@ export const deleteProducts = async (skusToDelete) => {
 
 export const getAttributes = async () => {
   const url = `${BASE_URL}/attributes`;
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token") ?? BASE_TOKEN;
   const response = await fetch(url, {
     method: "GET",
     headers: {
@@ -103,7 +103,7 @@ export const getAttributes = async () => {
 
 export const getTypes = async () => {
   const url = `${BASE_URL}/types`;
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token") ?? BASE_TOKEN;
   const response = await fetch(url, {
     method: "GET",
     headers: {
