@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import NavbarBuilder from '../../utils/builders/NavbarBuilder';
 
-function Navbar({navigate}) {
+function Navbar() {
 
     const location = useLocation();
     const navbar = <NavbarBuilder pathname={location.pathname}/>

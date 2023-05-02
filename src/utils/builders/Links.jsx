@@ -83,13 +83,13 @@ export function Links() {
     {
       id: 'save-product-btn',
       to: '/',
-      label: 'SAVE',
+      label: 'Save',
       onClick: (event) => handleSave(event, products, setProducts, newProduct, setNewProduct, productsFormErrors)
     },
     {
       id: 'cancel-product-btn',
       to: '/',
-      label: 'CANCEL',
+      label: 'Cancel',
       onClick: () => handleCancel()
     },
   ];
