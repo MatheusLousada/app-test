@@ -40,19 +40,19 @@ function ProductCard(props) {
       </div>
       <div className='card-body'>
         <div className='product-card-div-sku'>
-          <span className='product-tag-sku'>{props.sku}</span>
+          <p className='product-tag-sku'>{props.sku}</p>
         </div>
         <div className='product-card-div-name'>
-          <span className='product-name'>{props.name}</span>
+          <p className='product-name'>{props.name}</p>
         </div>
         <div className='product-card-div-price'>
-          <span className='product-price'>$ {props.price}</span>
+          <p className='product-price'>$ {props.price}</p>
         </div>
         <div className='product-card-div-attributes'>
           {attributeDescription && (
-            <span className='product-attribute'>
+            <p className='product-attribute'>
               {attributeDescription}: {attributeValue} {attributeUnit}
-            </span>
+            </p>
           )}
         </div>
       </div>
