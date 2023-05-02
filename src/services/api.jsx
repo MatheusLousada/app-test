@@ -19,25 +19,19 @@ export async function login() {
     headers: headers,
     body: JSON.stringify(body)
   };
-  console.log('aqui');
-  console.log('----------');
+
   await fetch(url, requestOptions)
-  .then(response => {
-    console.log(response)
-    response.json()})
-  .then(data => {
-    console.log(data.token)
-    localStorage.setItem('token', data.token)
-  } )
+  .then(response => response.json())
+  .then(data => localStorage.setItem('token', data.token) )
   .catch(error => console.error(error))
 }
 
 export const addProduct = async (product) => {
   const url = `${BASE_URL}/products`;
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token") ?? '' ;
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
+    "Authorization": `Bearer ${token}`,
   };
   const requestOptions = {
     method: "POST",
