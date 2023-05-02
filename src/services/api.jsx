@@ -22,7 +22,10 @@ export async function login() {
 
   await fetch(url, requestOptions)
   .then(response => response.json())
-  .then(data => localStorage.setItem('token', data.token) )
+  .then(data => {
+    console.log(data.token)
+    localStorage.setItem('token', data.token)
+  } )
   .catch(error => console.error(error))
 }
 
