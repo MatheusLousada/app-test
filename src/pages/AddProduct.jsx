@@ -123,8 +123,8 @@ const AddProduct = () => {
 
           if (!values.name) {
             errors.name = 'Required';
-          } else if (values.sku.length < 2) {
-            errors.sku = 'Invalid name. Name must have minimal 2 caracteres.';
+          } else if (values.name.length < 2) {
+            errors.name = 'Invalid name. Name must have minimal 2 caracteres.';
           }
 
           if (!values.price) {
