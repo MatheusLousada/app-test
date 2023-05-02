@@ -115,12 +115,16 @@ const AddProduct = () => {
 
           if (!values.sku) {
             errors.sku = 'Required';
-          } else if (!/^[a-zA-Z0-9]*$/.test(values.sku)) {
+          } else if (!/^[a-zA-Z0-9]+$/.test(values.sku)) {
             errors.sku = 'Invalid SKU. SKU can only contain letters and numbers.';
+          } else if (values.sku.length < 3) {
+            errors.sku = 'Invalid SKU. SKU must have minimal 2 caracteres.';
           }
 
           if (!values.name) {
             errors.name = 'Required';
+          } else if (values.sku.length < 3) {
+            errors.sku = 'Invalid name. Name must have minimal 2 caracteres.';
           }
 
           if (!values.price) {
