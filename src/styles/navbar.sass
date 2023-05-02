@@ -1,0 +1,50 @@
+@import 'variables'
+
+.navbar
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    background: white
+    padding: 2rem 12rem
+    display: flex
+    flex-direction: row
+    align-content: center
+    justify-content: space-between
+    align-items: center
+
+    .div-buttons
+        display: flex
+
+        div
+            display: flex
+            align-items: center
+            flex-wrap: nowrap
+            align-content: center
+            justify-content: center
+            flex-direction: row
+
+    @media (max-width: 820px)
+        display: block
+        text-align: center
+        height: 11rem
+        padding: 2rem 7rem
+
+        .div-buttons
+            flex-direction: column
+
+            button
+                margin-top: 1rem
+                margin-left: 0
+                width: 100%
+
+.div-icon-title
+    display: flex
+    align-items: center
+    color: $orange
+    flex-direction: row
+    flex-wrap: nowrap
+
+    svg
+        font-size: 2.5rem
+        margin-right: 1.5rem

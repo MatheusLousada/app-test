@@ -1,0 +1,99 @@
+@import 'variables'
+
+main
+    min-height: 30rem !important
+    display: flex
+
+form
+    width: 100%
+
+#product_form
+    width: 45%
+    display: flex
+    justify-content: center
+    flex-direction: column
+    flex-wrap: nowrap
+    align-content: center
+    align-items: start
+    padding: 2rem
+
+    @media (max-width: 1600px)
+        width: 60%
+
+    @media (max-width: 1300px)
+        width: 80%
+
+    @media (max-width: 840px)
+        width: 95%
+
+    .div_product_form
+        padding: 0.5rem
+        margin: 0.5rem 0rem
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-content: center
+        justify-content: space-between
+        align-items: center
+
+        label
+            font-weight: 800
+
+        input, select
+            width: 70%
+            padding: 0.5rem
+            border: solid 0.1px #0000001f
+            border-radius: 0.2rem
+
+    .div_error
+        color: #ff0000
+        background: #ff00001a
+        padding: 0.1rem 0.5rem
+        border-radius: 0.3rem
+        font-size: 0.9rem
+
+    #attributes
+        flex-direction: column
+
+        div
+            width: 100%
+            display: flex
+            flex-direction: row
+            align-content: center
+            justify-content: space-between
+            align-items: center
+            margin: 0.5rem 0rem
+
+            label
+                font-weight: 800
+
+            input, select
+                width: 70%
+                padding: 0.5rem
+
+    .class_furniture, .class_dvd, .class_book
+        border-radius: 0.3rem
+
+        .attribute_div
+            display: flex !important
+            flex-direction: column !important
+            padding: 0 !important
+            margin: 0 !important
+            margin-top: 1rem !important
+
+    .class_furniture
+        background-color: rgba($purple, 0.5)
+
+    .class_dvd
+        background-color: rgba($green, 0.5)
+
+    .class_book
+        background-color: rgba($orange, 0.5)
+
+    .form_div_errors
+        background: #ff00002b
+        color: red
+        border-radius: 0.3rem
+
+footer
+    margin-top: 2rem !important

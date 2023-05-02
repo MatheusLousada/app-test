@@ -1,0 +1,126 @@
+@import 'variables'
+
+#div-container-product-cards
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: auto
+    grid-gap: 2rem
+    justify-items: center
+    align-items: center
+    justify-content: center
+    align-content: center
+    margin: 0 auto
+    padding: 2rem 1rem
+
+    @media (max-width: 1600px)
+        grid-template-columns: repeat(3, 1fr)
+
+    @media (max-width: 1300px)
+        grid-template-columns: repeat(2, 1fr)
+
+    @media (max-width: 840px)
+        grid-template-columns: repeat(1, 1fr)
+
+.product-card, .product-card-selected
+    height: 14rem
+    width: 20rem
+    border-radius: 0.2rem
+    font-size: 15px
+    background: orange
+    margin-top: 0.7rem
+    margin-bottom: 0.7rem
+    text-align: center
+
+    span
+        display: inline-block
+        width: 18rem
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+.product-card-selected
+    transition: transform 0.3s ease-in-out
+    transform: translateY(-20px)
+    transform: scale(1.02)
+    box-shadow: 2px 4px 8px rgba(38, 38, 38, 0.2)
+
+.product-card-dvd
+    background: $green
+
+.product-card-book
+    background: $orange
+
+.product-card-furniture
+    background: $purple
+
+.product-card-div-check
+    min-height: 2rem
+    display: flex
+    padding: 0.3rem 0.3rem
+
+.card-body
+    display: flex
+    height: 11rem
+    flex-direction: column
+    flex-wrap: nowrap
+    align-content: center
+    justify-content: center
+    align-items: center
+    color: white
+
+.product-card-div-sku
+    min-height: 2rem
+    display: flex
+    padding: 5px 1rem
+    justify-content: center
+
+    .product-tag-sku
+        background: #00000023
+        color: white
+        font-weight: 600
+        padding: 0.5rem 1rem
+        border-radius: 1rem
+
+.product-card-div-name
+    min-height: 3rem
+    display: flex
+    justify-content: center
+    padding: 8px 1rem
+    font-weight: 600
+    text-align: center
+    align-items: center
+
+.product-card-div-price
+    min-height: 2rem
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 8px 1rem
+    font-weight: 600
+
+.product-card-div-attributes
+    min-height: 2rem
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 8px 1rem
+    font-weight: 600
+
+.delete-checkbox
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    display: inline-block
+    width: 1rem
+    height: 1rem
+    cursor: pointer
+    border: 0.1px solid #00000023
+    border-radius: 3px
+    background-color: #00000023
+
+    &:checked
+        background-color: black
+        padding: 0px
+
+    &:focus
+        outline: none !important
